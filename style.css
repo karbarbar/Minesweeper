@@ -1,0 +1,261 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 0;
+    text-align: center;
+    max-width: 1280px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px 0 40px 0;
+    padding: 0;
+}
+
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+}
+
+.nav-item-easy,
+.nav-item-medium,
+.nav-item-hard {
+    margin: 0 20px;
+    border: cadetblue 1px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-item-easy:hover,
+.nav-item-medium:hover,
+.nav-item-hard:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+.game-header {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-header .game-header-count,
+.game-header .game-header-timer,
+.game-header .game-header-emoji {
+    background-color: gray;
+    border-radius: 5px;
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-header-emoji {
+    background-image: url("Smileemoji.webp");
+    background-size: cover;
+}
+
+.game-over {
+    display: none;
+}
+
+.active {
+    display: block;
+    position: absolute;
+    width: 60%;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: cadetblue;
+    border-radius: 20px;
+    align-items: center;
+
+}
+
+.game-over-button {
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 60px;
+    width: 150px;
+    margin-top: 10%;
+    cursor: pointer;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-board {
+    background-color: lightgray;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+}
+
+.game-board-medium {
+    background-color: lightgray;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+}
+
+.game-board-hard {
+    background-color: lightgray;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(25, 40px);
+}
+
+.game-board-button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.dark-mode {
+    background-color: black;
+
+}
+
+.game-board-button:hover {
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.game-board-button:active {
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.colors-game-board {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 30px;
+}
+
+.colors-game-board:hover {
+    opacity: 0.8;
+
+}
+
+.dark {
+    background-color: #000;
+
+}
+
+@media screen and (max-width: 500px) {
+    .game-header {
+        width: 100%;
+    }
+
+    .menu, .active_menu {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        justify-content: space-between;
+        outline: none;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    .span-menu {
+        width: 100%;
+        height: 2px;
+        background-color: #f1cdb3;
+    }
+
+    .active_menu {
+        transform: rotate(90deg);
+    }
+
+    .navigation {
+        padding: 20px;
+
+    }
+
+    .nav {
+        position: absolute;
+        left: -100%;
+    }
+
+    .active_navigation {
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+    .game-board {
+        grid-template-columns: repeat(10, 25px);
+    }
+
+    .game-board-medium {
+        grid-template-columns: repeat(15, 25px);
+    }
+
+    .game-board-hard {
+        height: 20px;
+        grid-template-columns: repeat(25, 25px);
+    }
+
+    .game-board-button {
+        height: 25px;
+    }
+    .game-header-count,
+    .game-header-timer,
+    .game-header-emoji {
+        height: 30px;
+        width: 30px;
+    }
+}
